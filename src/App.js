@@ -3,14 +3,19 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import './App.css';
 import ToDoPage from './Pages/ToDoPage';
+import ShowPage from './Pages/showPage';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/'>
+          <Route exact path='/'>
             <ToDoPage />
+          </Route>
+
+          <Route path='/:id'>
+            <ShowPage />
           </Route>
         </Switch>
       </Router>
