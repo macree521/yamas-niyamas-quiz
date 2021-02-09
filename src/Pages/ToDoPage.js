@@ -20,9 +20,24 @@ export default function ToDoPage () {
         console.log(addTodo)
     }
 
+    const handleFormSubmit = () => {
+        fetch('/api/create', {
+            method: ['POST'],
+            body: JSON.stringify({
+                content: addTodo
+            }),
+            headers: {
+                "Content-type": "application/json;  charset=UTF-8"
+            }
+        }).then(response => response.json())
+            .then(message => console.log(message))
+    }
+
     return (
         <div>
-            <Form userInput={addTodo} onFormChange={handleFormChange} />
+            <Form userInput={addTodo} 
+            onFormChange={handleFormChange}
+            onFormSubmit={handleFormSubmit} />
             <Card listOfTodos={todo} />
         </div>
     );
