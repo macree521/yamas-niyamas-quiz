@@ -15,24 +15,15 @@ export default function ToDoPage () {
         }).then(data => setTodo(data))
     },[])
 
+    const handleFormChange = (inputValue) => {
+        setAddTodo(inputValue)
+        console.log(addTodo)
+    }
+
     return (
         <div>
-            <Form userInput={addTodo}/>
-            <Card listOfTodos={todo}/>
+            <Form userInput={addTodo} onFormChange={handleFormChange} />
+            <Card listOfTodos={todo} />
         </div>
     );
 }
-
-// respone.data.map() 
-// return (
-//     <div>
-//         <Card todo={todo}/>
-//     </div>
-// )
-
-//console.log("response data", response)
-            // return response.map() 
-
-            // if(response.data.map()){
-            //     return response.json()
-            // }

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Form ({ userInput }) {
+export default function Form ({ userInput, onFormChange }) {
     const handleChange = (event) => {
-        console.log(event.target.value)
+        onFormChange(event.target.value)
     }
 
     return (
