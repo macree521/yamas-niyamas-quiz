@@ -35,5 +35,9 @@ def create():
 
     return {'201': 'todo created successfully'}
 
+@app.route('/api/<int:id>')
+def show(id):
+    return jsonify([*map(todo_serializer, ToDo.query.filter_by(id=id))])
+
 if __name__ == '__main__':
     app.run(debug=True)
