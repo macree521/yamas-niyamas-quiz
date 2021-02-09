@@ -39,5 +39,14 @@ def create():
 def show(id):
     return jsonify([*map(todo_serializer, ToDo.query.filter_by(id=id))])
 
+@app.route('/api/<int:id>', methods=['POST'])
+def delete(id):
+    request_data = json.loads(request.data)
+    ToDo.query.filter_by(id=request_data['id']).delete()
+
+    db.session.commit()
+
+    return {'204': 'todo DELETED'}
+
 if __name__ == '__main__':
     app.run(debug=True)
