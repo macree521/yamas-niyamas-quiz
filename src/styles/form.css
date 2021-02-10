@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+input:focus { 
+    outline: none !important;
+}
+
 .inputForm button {
     padding: 10px;
     font-size: 16px;

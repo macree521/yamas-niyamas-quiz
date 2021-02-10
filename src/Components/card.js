@@ -22,7 +22,7 @@ export default function Card ({ listOfTodos }) {
     return transition.map(({ item, key, props }) => (
         <animated.ul key={item.id} style={props}>
             <li className="listOfTodos">
-                <Link to={`${item.id}`}>{item.content}</Link>
+                <Link to={`${item.id}`} className="cardLinks">{item.content}</Link>
             </li> 
         </animated.ul>
 

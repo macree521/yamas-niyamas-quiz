@@ -1,6 +1,6 @@
 html {
     min-height: 100%;
-    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 body {
@@ -9,8 +9,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: sans-serif;
-    
-    
+    overscroll-behavior: none;
+    height: 100%;
 }
 
 #heading {

@@ -16,10 +16,10 @@ export default function ShowPage() {
     return (
         <div>
             {todo.length > 0 && todo.map(data =>
-            <div key='id'>{data.content}</div>
+            <div className='textAboveBtn' key='id'>{data.content}</div>
             )}
             <Delete id={id} />
-            <hr></hr>
+            
             <Link to='/'>Back to Your Todos</Link>
         </div>
     )

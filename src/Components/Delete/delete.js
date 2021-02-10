@@ -19,8 +19,8 @@ export default function Delete ({ id }) {
     }
 
     return (
-        <div>
-            <button onClick={deleteTodo}>Completed</button>
+        <div className="deleteBtn">
+            <button onClick={deleteTodo}>Task Completed</button>
         </div>
     );
 }
