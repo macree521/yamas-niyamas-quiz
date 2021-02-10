@@ -14,10 +14,11 @@ export default function Form ({ userInput, onFormChange, onFormSubmit }) {
         <div className="inputForm">
             <form onSubmit={handleSubmit}>
                 <input type='text' 
+                placeholder='Enter Task'
                 required value={userInput}
                 onChange={handleChange}
                 ></input>
-                <input type='submit'></input>
+                <button type='submit'>Add!</button>
             </form>
         </div>
     );

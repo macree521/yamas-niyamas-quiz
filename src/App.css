@@ -1,7 +1,6 @@
 * {
   list-style-type: none;
 }
-
 .App {
   text-align: center;
 }
@@ -29,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #d388f1;
 }
 
 @keyframes App-logo-spin {
